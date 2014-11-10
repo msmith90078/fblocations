@@ -28,12 +28,14 @@ Appologies in advance for the messy code and manual process
 
 * Now execute the following commands:
 
-    curl -sS https://getcomposer.org/installer | php
-    php composer.phar install
-    php convert.php
+```
+curl -sS https://getcomposer.org/installer | php
+php composer.phar install
+php convert.php
+```
 
-* This will generate a file called locations.json which in turn be loaded by the index.html page
+This will generate a file called locations.json which in turn be loaded by the index.html page.
 
-* That's it, now go to index.html and find out which locations FB knows that you've logged in from!
+That's it, now go to index.html and find out which locations FB knows that you've logged in from!
 
 
