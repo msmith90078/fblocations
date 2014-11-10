@@ -3,7 +3,7 @@
 
 require 'vendor/autoload.php';
 
-$MY_IPINFO_DB_KEY = 'get your own key from http://ipinfodb.com/register.php :)';
+$MY_IPINFO_DB_KEY = 'get your own free key from http://ipinfodb.com/register.php :)';
 
 use Flintstone\Flintstone;
 $options = ['dir' => '.'];

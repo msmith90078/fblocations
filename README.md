@@ -28,7 +28,7 @@ Appologies in advance for the messy code and manual process
 
 * Run "php composer.phar install" to install some dependencies
 
-* Now just run convert.php. This will generate a file called locations.json which in turn be loaded by
+* Now just run "php convert.php". This will generate a file called locations.json which in turn be loaded by
   the index.html page
 
 * That's it, now go to index.html and find out which locations FB knows that you've logged in from!
