@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="http://openlayers.org/en/v3.0.0/css/ol.css" type="text/css">
+    <style>
+      .map {
+        height: 600px;
+        width: 900px;
+      }
+    </style>
+    <script src="http://openlayers.org/en/v3.0.0/build/ol.js" type="text/javascript"></script>
+    <title>OpenLayers 3 example</title>
+  </head>
+  <body>
+    <h3>My Facebook stored locations</h3>
+    <div id="map" class="map"></div>
+    <script type="text/javascript">
+        var iconStyle = new ol.style.Style({
+        image: new ol.style.Icon({
+            anchor: [0.5, 46],
+            anchorXUnits: 'fraction',
+            anchorYUnits: 'pixels',
+            opacity: 0.75,
+            src: 'http://openlayers.org/en/v3.0.0/examples/data/icon.png'
+        })
+        });
+
+        geoJson = new ol.source.GeoJSON({ url: 'locations.json', projection: 'EPSG:3857' });
+
+
+        var map = new ol.Map({
+        view: new ol.View({
+            center: [0, 0],
+            zoom: 1
+        }),
+        layers: [
+            new ol.layer.Tile({ source: new ol.source.MapQuest({layer: 'osm'}), style: 'Road'}),
+            new ol.layer.Vector({source: geoJson, style: iconStyle})
+        ],
+        target: 'map'
+        });
+    </script>
+  </body>
+</html>

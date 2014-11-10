@@ -1,0 +1,5 @@
+vendor/
+composer.phar
+ipsdb.dat
+locations.json
+security.htm
