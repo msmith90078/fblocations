@@ -16,7 +16,9 @@ Appologies in advance for the messy code and manual process
 
 * You first need to create an archive of your FB data. Visit https://www.facebook.com/settings?tab=account
 
-* Once you have created your archive and extracted it, place the file 'security.htm' in this directory
+* At the bottom click on the link "Download a copy" of your Facebook data
+
+* Once you have downloaded your archive and extracted it, place the file 'html/security.htm' in this directory
 
 * Since we need to translate these IP addresses to their long/lat coordinates, we need some sort of web
   service, I used ipinfodb.com because it just works. (Seems like they're getting a lot of DDoS attacks
@@ -24,12 +26,13 @@ Appologies in advance for the messy code and manual process
 
 * Once you have an API key, edit convert.php and place the key there
 
-* Get composer by running "curl -sS https://getcomposer.org/installer | php"
+* Now execute the following commands:
 
-* Run "php composer.phar install" to install some dependencies
+    curl -sS https://getcomposer.org/installer | php
+    php composer.phar install
+    php convert.php
 
-* Now just run "php convert.php". This will generate a file called locations.json which in turn be loaded by
-  the index.html page
+* This will generate a file called locations.json which in turn be loaded by the index.html page
 
 * That's it, now go to index.html and find out which locations FB knows that you've logged in from!
 
